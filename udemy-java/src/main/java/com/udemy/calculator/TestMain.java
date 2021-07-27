@@ -1,15 +1,6 @@
 package com.udemy.calculator;
 
-
-import java.util.List;
-import java.util.function.Consumer;
-
 public class TestMain {
-
-    @FunctionalInterface
-    public interface TriConsumer{
-        void accept(String a, String b, int c);
-    }
 
     public interface Person{}
 
@@ -23,9 +14,5 @@ public class TestMain {
         System.out.println(
            Calculator.calculate(exp)
         );
-
-        TriConsumer personProperties = (firstName, lastName, age) -> {   };
-
-        Consumer<Person> person = (p) -> { };
     }
 }
