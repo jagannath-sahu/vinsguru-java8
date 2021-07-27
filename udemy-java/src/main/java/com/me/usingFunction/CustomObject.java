@@ -7,21 +7,11 @@ public class CustomObject implements Serializable {
 
     private String attrName;
 
-    private RequestType requestType;
-
     public String getAttrName() {
         return attrName;
     }
 
     public void setAttrName(final String attrName) {
         this.attrName = attrName;
-    }
-
-    public RequestType getRequestDataType() {
-        return requestType;
-    }
-
-    public void setRequestDataType(final RequestType requestDataType) {
-        this.requestType = requestDataType;
     }
 }
