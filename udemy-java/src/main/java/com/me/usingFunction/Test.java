@@ -7,6 +7,8 @@ import java.util.Map;
 
 public class Test {
 
+	static OutputFilterFunction<List<Map<String, CustomObject>>> OutputFilterFunction;
+
 	public static void main(String[] args) {
 		List<Map<String, CustomObject>> responseList = new ArrayList<>();
         Map<String, CustomObject> responseMap = new HashMap<>();
@@ -65,7 +67,10 @@ public class Test {
         responseList.add(responseMap);
         responseList.add(responseMap1);
 
-        OutputFilterFunction<List<Map<String, CustomObject>>> OutputFilterFunction = new OutputFilterFunction<>("laptopModelNumber");
+        OutputFilterFunction = new OutputFilterFunction<>("laptopModelNumber");
+        System.out.println(OutputFilterFunction.apply(responseList));
+
+        OutputFilterFunction = new OutputFilterFunction<>("moduleCode");
         System.out.println(OutputFilterFunction.apply(responseList));
 	}
 
